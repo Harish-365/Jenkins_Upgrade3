@@ -1,13 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
+    <!-- Add ImplicitUsings for cleaner code -->
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="PowerArgs" Version="3.6.0" />
-    <PackageReference Include="prometheus-net" Version="3.4.0" />
-    <PackageReference Include="prometheus-net.AspNetCore" Version="3.4.0" />
+    <!-- Updated packages for .NET 9.0 compatibility -->
+    <PackageReference Include="PowerArgs" Version="3.6.0" /> <!-- Verify if newer exists -->
+    <PackageReference Include="prometheus-net" Version="8.0.0" />
+    <PackageReference Include="prometheus-net.AspNetCore" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,3 +20,6 @@
   </ItemGroup>
 
 </Project>
+
+
+
