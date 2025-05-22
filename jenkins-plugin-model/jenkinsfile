@@ -19,12 +19,6 @@ pipeline {
             }
         }
 
-        stage('Check User') {
-            steps {
-                sh 'whoami'
-            }
-        }
-
         stage('Checkout Jenkins Upgrade3 Git Repository') {
             steps {
                 script {
