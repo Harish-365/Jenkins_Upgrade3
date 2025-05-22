@@ -1,2 +1,2 @@
 #!/bin/bash
-dotnet build ./jenkins-plugin-model/src/Pi.Web/Pi.Web.csproj
+sudo /usr/share/dotnet/dotnet build ./jenkins-plugin-model/src/Pi.Web/Pi.Web.csproj
