@@ -29,6 +29,18 @@ cd hello-world
 # Create a plugin from the Jenkins templates:
 mvn -U archetype:generate -Dfilter="io.jenkins.archetypes:"
 
+**This Maven command is used to generate a Jenkins plugin project using an archetype. Let’s break it down:
+Command Breakdown
+mvn -U archetype:generate -Dfilter="io.jenkins.archetypes:"
+- mvn → Runs Maven.
+- -U → Forces an update of the local repository to get the latest archetypes.
+- archetype:generate → Generates a new project from an archetype.
+- -Dfilter="io.jenkins.archetypes:" → Filters available Jenkins archetypes to choose from.
+What Does This Do?
+- It lists Jenkins plugin archetypes available in Maven.
+- You can select an archetype to create a plugin skeleton for Jenkins development.**
+
+
 mvn verify
 mvn package
 
