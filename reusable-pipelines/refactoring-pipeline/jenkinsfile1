@@ -10,6 +10,23 @@ pipeline {
       stage('Audit tools') {
         steps {
           sh '''
+              echo "check java version"
+              if ! command -v java &> dev/null; then
+                  echo "Java is not available, installing Java"
+                  sudo apt-get update
+                  sudo apt-get install -y openjdk-21-jdk
+              else;
+                  echo "java is already installed"
+              fi
+              echo "check java version"
+              if ! command -v mvn &> dev/null; then
+                  echo "maven is not available, installing maven"
+                  sudo apt-get update
+                  sudo apt-get install -y maven
+              else;
+                  echo "Maven is already installed"
+              fi
+
               git version
               java -version
               mvn -version
