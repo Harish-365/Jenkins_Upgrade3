@@ -11,11 +11,11 @@ pipeline {
         steps {
           sh '''
               echo "check java version"
-              if ! command -v java &> dev/null; then
+              if ! command -v java &> /dev/null; then
                   echo "Java is not available, installing Java"
                   sudo apt-get update
                   sudo apt-get install -y openjdk-21-jdk
-              else;
+              else
                   echo "java is already installed"
               fi
               echo "check java version"
@@ -23,7 +23,7 @@ pipeline {
                   echo "maven is not available, installing maven"
                   sudo apt-get update
                   sudo apt-get install -y maven
-              else;
+              else
                   echo "Maven is already installed"
               fi
 
